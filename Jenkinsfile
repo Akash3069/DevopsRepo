@@ -21,6 +21,11 @@ pipeline {
                 sh 'docker run --name mycont9 -d -p 5000:5000 myimg'
             }
         }
+        stage('Destroy'){
+            steps {
+                sh 'docker stop mycont9'
+            }
+        }
        /* stage('app'){
             steps{
                 sh 'sudo apt-get install python3-flask -y'
