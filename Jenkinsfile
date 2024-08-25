@@ -18,13 +18,13 @@ pipeline {
                 sh 'ls'
                 sh 'docker --version'
                 sh 'docker build -t myimg .'
-                sh 'docker run --name mycont9 -d -p 5000:5000 myimg'
+                sh 'docker run --name mycont10 -d -p 5000:5000 myimg'
             }
         }
         stage('Destroy'){
             steps {
-                sh 'docker stop mycont9'
-            }
+                sh 'docker stop mycont10'
+        }
         }
        /* stage('app'){
             steps{
