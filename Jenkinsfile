@@ -18,7 +18,7 @@ pipeline {
                 sh 'ls'
                 sh 'docker --version'
                 sh 'docker build -t myimg .'
-                sh 'docker run --name mycont4 -d -p 5000:5000 myimg'
+                sh 'docker run --name mycont5 -d -p 5000:5000 myimg'
             }
         }
        /* stage('app'){
